@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="2dp"
+    android:background="@color/kuning"
+    app:strokeColor="@color/merah">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/hitam"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Gambar Film -->
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/iron_man"
+            android:scaleType="centerCrop"
+            android:contentDescription="Poster Film"
+            android:background="@color/abuabu" />
+
+        <!-- Judul Film -->
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Judul Film"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/biru"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Rating dengan Bintang dan Angka -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Rating Bintang -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="10"
+                android:stepSize="0.5"
+                android:rating="4.5"
+                android:isIndicator="true"
+                android:progressTint="@color/rating_star_yellow"
+                style="@style/Widget.AppCompat.RatingBar.Small" />
+
+            <!-- Angka Rating -->
+            <TextView
+                android:id="@+id/rating_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="4.5"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/rating_star_yellow"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Sutradara -->
+        <TextView
+            android:id="@+id/sutradara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sutradara: Nama Sutradara"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="@color/putih"
+            />
+
+        <!-- Deskripsi -->
+        <TextView
+            android:id="@+id/deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ini adalah deskripsi singkat tentang film yang ditampilkan. Deskripsi ini akan memberikan informasi dasar tentang film."
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            android:textColor="@color/design_default_color_background"
+            android:maxLines="3"
+            android:ellipsize="end" />
+
+        <!-- Tombol Aksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/button_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Favorite"
+                android:textColor="@color/putih"
+                android:backgroundTint="@color/rating_text_color"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:id="@+id/button_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/putih"
+                android:backgroundTint="@color/rating_text_color"
+                android:text="Detail"
+                style="?attr/materialButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema dasar aplikasi -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Warna utama (disesuaikan dengan warna material) -->
+        <item name="colorPrimary">@color/ungu</item>
+        <item name="colorOnPrimary">@color/putih</item>
+        <item name="colorSecondary">@color/oranye</item>
+        <item name="colorOnSecondary">@color/putih</item>
+        <item name="colorSurface">@color/putih</item>
+        <item name="colorError">@color/merah</item>
+    </style>
+
+    <!-- Tema aplikasi -->
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+</resources>
+
+
+    <!--<resources xmlns:tools="http://schemas.android.com/tools">-->
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your light theme here. &ndash;&gt;-->
+<!--        &lt;!&ndash; <item name="colorPrimary">@color/my_light_primary</item> &ndash;&gt;-->
+<!--    </style>-->
+
+<!--    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />-->
+<!--</resources>-->

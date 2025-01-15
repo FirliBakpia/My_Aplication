@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="merah">#FF0000</color>
+        <color name="hijau">#00FF00</color>
+        <color name="biru">#0000FF</color>
+        <color name="kuning">#FFFF00</color>
+        <color name="hitam">#000000</color>
+        <color name="putih">#FFFFFF</color>
+        <color name="abuabu">#808080</color>
+        <color name="coklat">#A52A2A</color>
+        <color name="oranye">#FFA500</color>
+        <color name="merah_muda">#FFC0CB</color>
+        <color name="hijau_muda">#90EE90</color>
+        <color name="biru_muda">#ADD8E6</color>
+        <color name="ungu">#800080</color>
+        <color name="emas">#FFD700</color>
+        <color name="aqua">#00FFFF</color>
+        <color name="biru_dongker">#00008B</color>
+        <color name="hijau_tua">#006400</color>
+        <color name="merah_marin">#C90505</color>
+
+        <!-- Warna untuk background merah, mirip dengan Netflix -->
+        <color name="netflix_red">#E50914</color> <!-- Merah Netflix -->
+
+        <!-- Warna untuk bintang rating -->
+        <color name="rating_star_yellow">#FFB200</color> <!-- Kuning Bintang Rating -->
+
+        <!-- Warna untuk teks hitam -->
+        <color name="black">#000000</color>
+
+        <!-- Warna untuk teks abu-abu -->
+        <color name="gray">#808080</color>
+
+        <!-- Warna untuk teks lebih gelap (untuk sutradara) -->
+        <color name="dark_gray">#666666</color>
+
+        <!-- Warna untuk rating angka -->
+        <color name="rating_text_color">#4A148C</color> <!-- Ungu untuk rating -->
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hitam"
+    tools:context=".Kalkulator">
+
+    <TextView
+        android:id="@+id/displayHasil"
+        android:layout_width="375dp"
+        android:layout_height="72dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/abuabu"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="@string/input"
+        android:textColor="@color/hitam"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridTombol"
+        android:layout_width="355dp"
+        android:layout_height="209dp"
+        android:layout_margin="16dp"
+        android:columnCount="4"
+        android:padding="6dp"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayHasil"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Baris 1 -->
+        <Button
+            android:id="@+id/tombol7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/tujuh"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/delapan"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/sembilan"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombolBagi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/merah"
+            android:backgroundTint="@color/ungu"
+            android:text="@string/bagi"
+            android:textSize="20sp" />
+        <!-- Baris 2 -->
+        <Button
+            android:id="@+id/tombol4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/empat"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/lima"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/enam"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombolKali"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/merah"
+            android:backgroundTint="@color/ungu"
+            android:text="@string/kali"
+            android:textSize="20sp" />
+
+        <!-- Baris 3 -->
+        <Button
+            android:id="@+id/tombol1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/satu"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/dua"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/tiga"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombolKurang"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/merah"
+            android:backgroundTint="@color/ungu"
+            android:text="@string/kurang"
+            android:textSize="20sp" />
+
+        <!-- Baris 4 -->
+        <Button
+            android:id="@+id/tombolC"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/kuning"
+            android:backgroundTint="@color/merah"
+            android:text="@string/reset"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombol0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:backgroundTint="@color/abuabu"
+            android:text="@string/nol"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombolSamaDengan"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/merah"
+            android:backgroundTint="@color/hijau"
+            android:text="@string/hasil"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/tombolTambah"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="0.2"
+            android:layout_columnWeight="0.5"
+            android:layout_margin="2dp"
+            android:textColor="@color/merah"
+            android:backgroundTint="@color/ungu"
+            android:text="@string/tambah"
+            android:textSize="20sp" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/tombolKembali"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/abuabu"
+        android:text="@string/HalamanUtama"
+        android:textColor="@color/merah"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridTombol" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

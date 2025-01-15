@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="nama_saya">Ras Muhamad Firli</string>
+    <string name="hobby_saya">Game Dadu</string>
+    <string name="acak_dadu">Dadu Random</string>
+    <string name="urut_dadu">Dadu Urut</string>
+    <string name="logoDadu">Logo Dadu</string>
+    <string name="reset_dadu">Reset Dadu</string>
+    <string name="HalamanUtama">Kembali ke Halaman Utama</string>
+
+    <string name="buttonPindahHalamanListMovie">Pindah Halaman List Movie</string>
+    <string name="buttonPindahHalamanKalkulator">Pindah Halaman Kalkulator</string>
+    <string name="buttonPindahHalamanListFilm">PindahHalamanListMovie</string>
+    <string name="film_ini_menceritakan_tentang">Film ini menceritakan tentang...</string>
+    <string name="judul_film">Judul Film</string>
+    <string name="_4_8">4.8</string>
+    <string name="sutradara_items">Sutradara: Christopher Nolan</string>
+    <string name="deskripsi_film">Deskripsi Film</string>
+    <string name="gambar_film">Gambar Film</string>"
+    <string name="button_detail">Detail</string>
+    <string name="button_favorite">Favorite</string>
+<!--    <string name="rating">⭐</string>-->
+    
+    <string name="tambah">+</string>
+    <string name="kurang">-</string>
+    <string name="bagi">/</string>
+    <string name="kali">*</string>
+    <string name="hasil">=</string>
+    <string name="satu">1</string>
+    <string name="dua">2</string>
+    <string name="tiga">3</string>
+    <string name="empat">4</string>
+    <string name="lima">5</string>
+    <string name="enam">6</string>
+    <string name="tujuh">7</string>
+    <string name="delapan">8</string>
+    <string name="sembilan">9</string>
+    <string name="nol">0</string>
+    <string name="reset">C</string>
+    <string name="koma">,</string>
+    <string name="input">0</string>
+</resources>

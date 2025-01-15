@@ -1,0 +1,6 @@
+<resources>
+    <style name="CustomCardShape" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Sesuaikan ukuran -->
+    </style>
+</resources>
