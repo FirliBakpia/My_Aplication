@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +24,7 @@ class ListMovies : AppCompatActivity() {
         setContentView(R.layout.activity_list_movies)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        val tombolKembali: Button = findViewById(R.id.tombolKembali) // Tambahkan tombol kembali
 
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = layoutManager
@@ -49,10 +51,17 @@ class ListMovies : AppCompatActivity() {
                 override fun onItemClick(position: Int) {
                     val selectedMovie = movies[position]
                     val intent = Intent(this@ListMovies, LoadImageURL::class.java)
-                    intent.putExtra("image_url", "http://10.0.2.2:5000/" + selectedMovie.foto) // Mengirim URL gambar ke LoadImageURL Activity
+                    intent.putExtra("image_url", "http://10.0.2.2:5000/" + selectedMovie.foto)
                     startActivity(intent)
                 }
             })
         })
+
+        // Event untuk tombol kembali ke halaman utama
+        tombolKembali.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Tutup halaman ini agar tidak menumpuk di back stack
+        }
     }
 }

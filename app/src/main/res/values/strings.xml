@@ -19,6 +19,7 @@
     <string name="gambar_film">Gambar Film</string>"
     <string name="button_detail">Detail</string>
     <string name="button_favorite">Favorite</string>
+    <string name="tombolKembali">Back to Home Page</string>
 <!--    <string name="rating">⭐</string>-->
     
     <string name="tambah">+</string>

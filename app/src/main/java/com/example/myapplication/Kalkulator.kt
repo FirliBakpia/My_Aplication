@@ -13,9 +13,9 @@ class Kalkulator : AppCompatActivity() {
     private lateinit var displayHasil: TextView
     private var currentInput: String = ""
     private var operator: String = ""
-    private var operand1: Double = 0.0
-    private var operand2: Double = 0.0
-    private var result: Double = 0.0
+    private var operand1: Int = 0
+    private var operand2: Int = 0
+    private var result: Int = 0
     private var isNewInput: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +74,7 @@ class Kalkulator : AppCompatActivity() {
         // Set OnClickListener untuk operator
         val operatorClickListener = View.OnClickListener { v ->
             val button = v as Button
-            operand1 = currentInput.toDouble()
+            operand1 = currentInput.toInt()
             operator = button.text.toString()
             currentInput = ""
         }
@@ -87,7 +87,7 @@ class Kalkulator : AppCompatActivity() {
         // Tombol reset
         tombolC.setOnClickListener {
             currentInput = ""
-            operand1 = 0.0
+            operand1 = 0
             operator = ""
             displayHasil.text = "0"
             isNewInput = true
@@ -95,20 +95,19 @@ class Kalkulator : AppCompatActivity() {
 
         // Tombol sama dengan (perhitungan)
         tombolSamaDengan.setOnClickListener {
-            operand2 = currentInput.toDouble()
+            operand2 = currentInput.toInt()
             when (operator) {
                 "+" -> result = operand1 + operand2
                 "-" -> result = operand1 - operand2
                 "*" -> result = operand1 * operand2
-                "/" -> result = operand1 / operand2
+                "/" -> result = if (operand2 != 0) operand1 / operand2 else 0
             }
-            // Mengubah hasil menjadi bilangan bulat jika tidak ada sisa desimal
-            result = if (result % 1.0 == 0.0) result.toInt().toDouble() else result
 
             displayHasil.text = result.toString()
             currentInput = result.toString()
             isNewInput = true
         }
+
         // Tombol Kembali
         tombolKembali.setOnClickListener {
             // Pindah ke ActivityMain

@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tombolReset: Button
     private lateinit var tombolListMovie: Button
     private lateinit var tombolKalkulator: Button
+    private var currentDaduIndex = 1 // Index dadu saat ini
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,18 +32,24 @@ class MainActivity : AppCompatActivity() {
         // Event tombol Acak Dadu
         tombolAcak.setOnClickListener {
             val randomDadu = Random.nextInt(1, 7) // Acak angka 1-6
-            val drawableId = when (randomDadu) {
-                1 -> R.drawable.dadu1
-                2 -> R.drawable.dadu2
-                3 -> R.drawable.dadu3
-                4 -> R.drawable.dadu4
-                5 -> R.drawable.dadu5
-                else -> R.drawable.dadu6
-            }
+            val drawableId = getDrawableForDadu(randomDadu)
             gambarDadu.setImageResource(drawableId)
-            Toast.makeText(this, "Dadu menunjukkan angka: $randomDadu", Toast.LENGTH_SHORT).show()
+            currentDaduIndex = randomDadu
         }
 
+        // Event tombol Urutkan Dadu
+        tombolUrut.setOnClickListener {
+            currentDaduIndex = if (currentDaduIndex < 6) currentDaduIndex + 1 else 1
+            val drawableId = getDrawableForDadu(currentDaduIndex)
+            gambarDadu.setImageResource(drawableId)
+        }
+
+        // Event tombol Reset
+        tombolReset.setOnClickListener {
+            gambarDadu.setImageResource(R.drawable.dadu1) // Reset ke dadu 1
+            currentDaduIndex = 1
+            Toast.makeText(this, "Dadu di-reset ke angka 1", Toast.LENGTH_SHORT).show()
+        }
 
         // Event tombol Pindah ke halaman List Movie
         tombolListMovie.setOnClickListener {
@@ -56,6 +63,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Menuju halaman Kalkulator", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, Kalkulator::class.java)
             startActivity(intent)
+        }
+    }
+
+    // Fungsi untuk mendapatkan drawable ID berdasarkan angka dadu
+    private fun getDrawableForDadu(dadu: Int): Int {
+        return when (dadu) {
+            1 -> R.drawable.dadu1
+            2 -> R.drawable.dadu2
+            3 -> R.drawable.dadu3
+            4 -> R.drawable.dadu4
+            5 -> R.drawable.dadu5
+            else -> R.drawable.dadu6
         }
     }
 }
